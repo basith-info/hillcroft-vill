@@ -91,11 +91,10 @@ export default function App() {
         {/* 1. Hero Section */}
         <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-            <img 
-              src="https://picsum.photos/seed/hillcroft-exterior/1920/1080" 
-              alt="Hillcroft Villa Exterior" 
+            <img
+              src="https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/facebook-cover.jpg"
+              alt="Hillcroft Villa Exterior"
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-hill-green/50" />
           </div>
