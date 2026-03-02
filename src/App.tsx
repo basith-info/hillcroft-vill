@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Calendar, 
-  Users, 
-  Home, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Instagram, 
-  Facebook, 
-  Twitter, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Utensils, 
-  BedDouble, 
+import {
+  Calendar,
+  Users,
+  Home,
+  MapPin,
+  Phone,
+  Mail,
+  Instagram,
+  Facebook,
+  Twitter,
+  CheckCircle2,
+  ShieldCheck,
+  Utensils,
+  BedDouble,
   Bath,
   ChevronRight,
   Menu,
@@ -21,41 +21,11 @@ import {
   Star
 } from 'lucide-react';
 import { ROOMS, FACILITIES, THINGS_TO_DO, VILLA_RULES, SAFETY_INFO, KITCHEN_GUIDELINES } from './constants';
+import BookingForm from './components/BookingForm';
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [checkIn, setCheckIn] = useState('');
-  const [checkOut, setCheckOut] = useState('');
-  const [guests, setGuests] = useState(1);
   const [selectedRoomId, setSelectedRoomId] = useState('full-villa');
-  const [isBookingConfirmed, setIsBookingConfirmed] = useState(false);
-
-  const selectedRoom = useMemo(() => 
-    ROOMS.find(r => r.id === selectedRoomId) || ROOMS[0], 
-  [selectedRoomId]);
-
-  const numberOfNights = useMemo(() => {
-    if (!checkIn || !checkOut) return 0;
-    const start = new Date(checkIn);
-    const end = new Date(checkOut);
-    const diffTime = Math.abs(end.getTime() - start.getTime());
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays > 0 ? diffDays : 0;
-  }, [checkIn, checkOut]);
-
-  const totalAmount = useMemo(() => {
-    return numberOfNights * selectedRoom.pricePerNight;
-  }, [numberOfNights, selectedRoom]);
-
-  const handleBooking = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!checkIn || !checkOut || numberOfNights <= 0) {
-      alert('Please select valid check-in and check-out dates.');
-      return;
-    }
-    setIsBookingConfirmed(true);
-    setTimeout(() => setIsBookingConfirmed(false), 5000);
-  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -174,100 +144,11 @@ export default function App() {
         {/* 2. Booking Engine Section */}
         <section id="booking" className="py-20 bg-hill-green px-6">
           <div className="max-w-6xl mx-auto">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="glass-card rounded-3xl p-8 md:p-12"
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-end">
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-semibold text-hill-green/60 flex items-center gap-2">
-                    <Calendar size={14} /> Check-in
-                  </label>
-                  <input 
-                    type="date" 
-                    value={checkIn}
-                    onChange={(e) => setCheckIn(e.target.value)}
-                    className="w-full bg-transparent border-b border-hill-green/20 py-2 focus:outline-none focus:border-hill-green text-hill-green"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-semibold text-hill-green/60 flex items-center gap-2">
-                    <Calendar size={14} /> Check-out
-                  </label>
-                  <input 
-                    type="date" 
-                    value={checkOut}
-                    onChange={(e) => setCheckOut(e.target.value)}
-                    className="w-full bg-transparent border-b border-hill-green/20 py-2 focus:outline-none focus:border-hill-green text-hill-green"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-semibold text-hill-green/60 flex items-center gap-2">
-                    <Users size={14} /> Guests
-                  </label>
-                  <select 
-                    value={guests}
-                    onChange={(e) => setGuests(parseInt(e.target.value))}
-                    className="w-full bg-transparent border-b border-hill-green/20 py-2 focus:outline-none focus:border-hill-green text-hill-green"
-                  >
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(n => (
-                      <option key={n} value={n}>{n} Guest{n > 1 ? 's' : ''}</option>
-                    ))}
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <label className="text-xs uppercase tracking-widest font-semibold text-hill-green/60 flex items-center gap-2">
-                    <Home size={14} /> Accommodation
-                  </label>
-                  <select 
-                    value={selectedRoomId}
-                    onChange={(e) => setSelectedRoomId(e.target.value)}
-                    className="w-full bg-transparent border-b border-hill-green/20 py-2 focus:outline-none focus:border-hill-green text-hill-green"
-                  >
-                    {ROOMS.map(room => (
-                      <option key={room.id} value={room.id}>{room.name}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* Dynamic Price Display */}
-              <div className="mt-12 pt-8 border-t border-hill-green/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                <div className="flex gap-12 text-center md:text-left">
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-hill-green/60 mb-1">Price per night</p>
-                    <p className="text-2xl font-serif text-hill-green">${selectedRoom.pricePerNight}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-hill-green/60 mb-1">Nights</p>
-                    <p className="text-2xl font-serif text-hill-green">{numberOfNights}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs uppercase tracking-widest text-hill-green/60 mb-1">Total</p>
-                    <p className="text-2xl font-serif text-muted-gold font-bold">${totalAmount}</p>
-                  </div>
-                </div>
-                
-                <button 
-                  onClick={handleBooking}
-                  className="btn-primary w-full md:w-auto px-12 py-4 text-lg"
-                >
-                  Confirm Booking
-                </button>
-              </div>
-
-              {isBookingConfirmed && (
-                <motion.div 
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-6 p-4 bg-emerald-50 text-emerald-800 rounded-xl text-center border border-emerald-100"
-                >
-                  Thank you! Your booking request for {selectedRoom.name} has been sent. We will contact you shortly.
-                </motion.div>
-              )}
-            </motion.div>
+            <BookingForm
+              rooms={ROOMS}
+              selectedRoomId={selectedRoomId}
+              onRoomChange={setSelectedRoomId}
+            />
           </div>
         </section>
 

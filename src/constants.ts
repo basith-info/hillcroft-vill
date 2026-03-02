@@ -6,7 +6,7 @@ export const ROOMS = [
     maxGuests: 10,
     pricePerNight: 1200,
     features: ['4 Bedrooms', 'Private Living Area', 'Full Kitchen Access', 'Private Garden'],
-    image: 'https://picsum.photos/seed/hillcroft-villa/1200/800'
+    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'room-1',
@@ -15,7 +15,7 @@ export const ROOMS = [
     maxGuests: 2,
     pricePerNight: 250,
     features: ['King Size Bed', 'Mountain View', 'En-suite Bathroom'],
-    image: 'https://picsum.photos/seed/hillcroft-room1/800/600'
+    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'room-2',
@@ -24,7 +24,7 @@ export const ROOMS = [
     maxGuests: 2,
     pricePerNight: 250,
     features: ['King Size Bed', 'Garden Access', 'En-suite Bathroom'],
-    image: 'https://picsum.photos/seed/hillcroft-room2/800/600'
+    image: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'room-3',
@@ -33,7 +33,7 @@ export const ROOMS = [
     maxGuests: 2,
     pricePerNight: 250,
     features: ['Queen Size Bed', 'Quiet Setting', 'En-suite Bathroom'],
-    image: 'https://picsum.photos/seed/hillcroft-room3/800/600'
+    image: 'https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=800'
   },
   {
     id: 'room-4',
@@ -42,7 +42,7 @@ export const ROOMS = [
     maxGuests: 2,
     pricePerNight: 250,
     features: ['Queen Size Bed', 'Mountain View', 'En-suite Bathroom'],
-    image: 'https://picsum.photos/seed/hillcroft-room4/800/600'
+    image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800'
   }
 ];
 
@@ -77,37 +77,37 @@ export const THINGS_TO_DO = [
     title: 'Gregory Lake',
     distance: '10 minutes',
     description: 'A popular lakeside spot perfect for relaxing walks, paddle boating, and enjoying the cool weather.',
-    image: 'https://picsum.photos/seed/gregory-lake/600/400'
+    image: 'https://images.pexels.com/photos/1410225/pexels-photo-1410225.jpeg?auto=compress&cs=tinysrgb&w=600'
   },
   {
     title: 'Victoria Park',
     distance: '10 minutes',
     description: 'A peaceful public park in the heart of town, known for its colorful flowers and landscaped gardens.',
-    image: 'https://picsum.photos/seed/victoria-park/600/400'
+    image: 'https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=600'
   },
   {
     title: 'Hakgala Botanical Garden',
     distance: '20 minutes',
     description: 'One of Sri Lanka\'s most beautiful botanical gardens, featuring a wide variety of flowers and rare plants.',
-    image: 'https://picsum.photos/seed/hakgala-garden/600/400'
+    image: 'https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&cs=tinysrgb&w=600'
   },
   {
     title: 'Horton Plains',
     distance: '1 hour',
     description: 'A breathtaking national park with scenic hiking trails, grasslands, and the famous World\'s End cliff.',
-    image: 'https://picsum.photos/seed/horton-plains/600/400'
+    image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=600'
   },
   {
     title: 'Lover\'s Leap Waterfall',
     distance: '15 minutes',
     description: 'A charming waterfall surrounded by greenery. A short hike leads to stunning views.',
-    image: 'https://picsum.photos/seed/lovers-leap/600/400'
+    image: 'https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&w=600'
   },
   {
     title: 'Tea Factory Tours',
     distance: 'Various',
     description: 'Visit a local tea factory to learn how Ceylon tea is made and enjoy freshly brewed tea.',
-    image: 'https://picsum.photos/seed/tea-factory/600/400'
+    image: 'https://images.pexels.com/photos/374885/pexels-photo-374885.jpeg?auto=compress&cs=tinysrgb&w=600'
   }
 ];
 
