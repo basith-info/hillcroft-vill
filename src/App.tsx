@@ -448,13 +448,12 @@ export default function App() {
               viewport={{ once: true }}
               className="h-[500px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
             >
-              {/* Google Maps Embed Placeholder */}
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.9!2d80.7!3d6.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTQnMDAuMCJOIDgwwrA0MicwMC4wIkU!5e0!3m2!1sen!2slk!4v1620000000000!5m2!1sen!2slk" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen 
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=80.77000%2C6.94000%2C80.80000%2C6.97000&layer=mapnik&marker=6.9567%2C80.7850"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
                 title="Hillcroft Villa Location"
               ></iframe>
