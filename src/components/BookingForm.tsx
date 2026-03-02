@@ -253,7 +253,7 @@ export default function BookingForm({ rooms, selectedRoomId, onRoomChange }: Boo
           <div className="flex gap-12 text-center md:text-left">
             <div>
               <p className="text-xs uppercase tracking-widest text-hill-green/60 mb-1">Price per night</p>
-              <p className="text-2xl font-serif text-hill-green">${selectedRoom.pricePerNight}</p>
+              <p className="text-2xl font-serif text-hill-green">LKR {selectedRoom.pricePerNight.toLocaleString()}</p>
             </div>
             <div>
               <p className="text-xs uppercase tracking-widest text-hill-green/60 mb-1">Nights</p>
@@ -261,7 +261,7 @@ export default function BookingForm({ rooms, selectedRoomId, onRoomChange }: Boo
             </div>
             <div>
               <p className="text-xs uppercase tracking-widest text-hill-green/60 mb-1">Total</p>
-              <p className="text-2xl font-serif text-muted-gold font-bold">${totalAmount}</p>
+              <p className="text-2xl font-serif text-muted-gold font-bold">LKR {totalAmount.toLocaleString()}</p>
             </div>
           </div>
 

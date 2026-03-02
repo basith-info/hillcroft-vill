@@ -92,7 +92,7 @@ export default function App() {
         <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/facebook-cover.jpg"
+              src="https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/WEbiste-cover.JPG"
               alt="Hillcroft Villa Exterior"
               className="w-full h-full object-cover"
             />
@@ -184,11 +184,10 @@ export default function App() {
               viewport={{ once: true }}
               className="relative"
             >
-              <img 
-                src="https://picsum.photos/seed/hillcroft-about/800/1000" 
-                alt="Villa Interior" 
+              <img
+                src="https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/about%20hill%20croft%20villa.JPG"
+                alt="Villa Interior"
                 className="rounded-2xl shadow-2xl"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-8 -left-8 bg-hill-green text-warm-beige p-8 rounded-2xl hidden lg:block">
                 <p className="text-4xl font-serif mb-1">100%</p>
@@ -224,7 +223,7 @@ export default function App() {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-hill-green font-semibold text-sm">
-                      ${room.pricePerNight} / Night
+                      LKR {room.pricePerNight.toLocaleString()} / Night
                     </div>
                   </div>
                   <div className="p-8">
@@ -507,11 +506,12 @@ export default function App() {
             <div>
               <h5 className="font-serif text-xl mb-6">Follow Us</h5>
               <div className="flex gap-4">
-                {[Instagram, Facebook, Twitter].map((Icon, i) => (
-                  <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-muted-gold hover:text-hill-green transition-all">
-                    <Icon size={20} />
-                  </a>
-                ))}
+                <a href="https://www.instagram.com/hillcroft_villa/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-muted-gold hover:text-hill-green transition-all">
+                  <Instagram size={20} />
+                </a>
+                <a href="https://www.facebook.com/hillcroftvilla" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-muted-gold hover:text-hill-green transition-all">
+                  <Facebook size={20} />
+                </a>
               </div>
               <div className="mt-8 p-4 bg-white/5 rounded-2xl border border-white/10">
                 <div className="flex items-center gap-2 mb-2">

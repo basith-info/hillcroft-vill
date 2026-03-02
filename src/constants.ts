@@ -4,45 +4,45 @@ export const ROOMS = [
     name: 'Full Villa',
     description: '4 Bedrooms - Ideal for families and groups',
     maxGuests: 10,
-    pricePerNight: 1200,
+    pricePerNight: 25000,
     features: ['4 Bedrooms', 'Private Living Area', 'Full Kitchen Access', 'Private Garden'],
-    image: 'https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?auto=compress&cs=tinysrgb&w=800'
+    image: 'https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/Full%20Villa.JPG'
   },
   {
     id: 'room-1',
     name: 'Room 1',
-    description: 'Cozy and elegant private room',
+    description: 'Cozy and elegant double room',
     maxGuests: 2,
-    pricePerNight: 250,
-    features: ['King Size Bed', 'Mountain View', 'En-suite Bathroom'],
-    image: 'https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg?auto=compress&cs=tinysrgb&w=800'
+    pricePerNight: 5500,
+    features: ['Double Bed', 'Mountain View', 'En-suite Bathroom'],
+    image: 'https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/Room%201.jpg'
   },
   {
     id: 'room-2',
     name: 'Room 2',
-    description: 'Spacious room with modern amenities',
+    description: 'Spacious double room with modern amenities',
     maxGuests: 2,
-    pricePerNight: 250,
-    features: ['King Size Bed', 'Garden Access', 'En-suite Bathroom'],
-    image: 'https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=800'
+    pricePerNight: 5500,
+    features: ['Double Bed', 'Garden Access', 'En-suite Bathroom'],
+    image: 'https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/room-2.JPG'
   },
   {
     id: 'room-3',
     name: 'Room 3',
-    description: 'Comfortable retreat for two',
-    maxGuests: 2,
-    pricePerNight: 250,
-    features: ['Queen Size Bed', 'Quiet Setting', 'En-suite Bathroom'],
-    image: 'https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg?auto=compress&cs=tinysrgb&w=800'
+    description: 'Comfortable single room retreat',
+    maxGuests: 1,
+    pricePerNight: 3000,
+    features: ['Single Bed', 'Quiet Setting', 'En-suite Bathroom'],
+    image: 'https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/room%20-3.jpg'
   },
   {
     id: 'room-4',
     name: 'Room 4',
-    description: 'Elegant room with classic decor',
+    description: 'Elegant double room with classic decor',
     maxGuests: 2,
-    pricePerNight: 250,
-    features: ['Queen Size Bed', 'Mountain View', 'En-suite Bathroom'],
-    image: 'https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=800'
+    pricePerNight: 5500,
+    features: ['Double Bed', 'Mountain View', 'En-suite Bathroom'],
+    image: 'https://ysepxdqcmwcplwwstdrs.supabase.co/storage/v1/object/public/room-images/Full%20Villa.JPG'
   }
 ];
 
